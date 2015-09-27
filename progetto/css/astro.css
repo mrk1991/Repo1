@@ -1,0 +1,1032 @@
+body{
+    background-image: url("../images/sky.jpg");
+	font-family: "Open Sans", Arial, sans-serif; /*tipi di caratteri da usare nella pagina*/
+}
+
+div#page{
+	width: 1024px; /*larghezza pagina fissa*/
+	margin-left: auto; /*margine sinistro*/
+	margin-right: auto; /*margine destro*/
+	margin-top: 20px; /*margine alto*/
+	margin-bottom: 20px; /*margine basso*/
+	background-image: url("../images/logoPrincipale.jpg");
+	border-radius: 20px; /*smussa gli angoli*/
+}
+
+											/** Inizio definizione stile Header **/
+
+div#header{
+	position: relative;
+	padding-left: 20px; /*definisce lo spazio presente tra il bordo sinistro dell'immagine e l'inizio del testo*/
+	padding-right: 20px; /*definisce lo spazio presente tra il bordo destro dell'immagine e la fine del testo*/
+	height: 219px; /*altezza header*/
+	border-bottom: 2px solid #EFEFEF; /*crea un bordo inferiore bianco per delimitare l'immagine di sfondo dal resto della pagina*/
+	
+}
+
+div#logo{ /*sezione in cui è presente il logo del sito e il nome*/
+	position:absolute;
+	margin-top: 73px; /*posizione del testo e del logo rispetto al bordo superiore dell'immagine presente nell'header*/
+	background-image: url("../images/stella.jpg");
+	background-repeat: no-repeat; /*blocca ripetizione del logo*/
+	background-size: 60px 60px; /*dimensione icona: istruzione CSS3*/
+	height: 60px; /*altezza logo*/
+	padding-left: 70px; /*spostamento testo rispetto all'immagine*/
+	line-height: 18px; /*linea verticale del testo*/
+	color: white; /*colore testo*/
+}
+
+div#info-log{
+    position: absolute;
+    top: 10px; /*distanza della parte superiore del div dalla pagina*/
+    right: 15px; /*distanza della parte destra del div dalla pagina*/
+    color: white; /*colore testo*/
+}
+
+div#info-log form{
+    display: inline; /*visualizzazione senza andare a capo per il form contenente il pulsante di logout*/
+}
+
+div#tabHeader{ /*sezione in cui sono presenti tutti i link alle altre pagine del sito*/
+	position: relative; /*posizione relativa rispetto all'header*/
+	top: 198px; /*distanza tra il bordo superiore dell'header e quello del menu*/
+	margin-left: 0px; /*margine sinistro tra il menù e l'header */
+	margin-right: 0px; /*margine destro tra il menù e l'header */
+	/*background-color: #E1E1E1;*/
+}
+
+ul#sezioni{ /*lista non ordinata dei link nell'header*/
+	padding: 0px; /*elimina il padding predefinito dalla lista*/
+	text-align: center; /*centra il contenuto del menù*/
+	/*background-color: red;*/
+}
+
+ul#sezioni li{ /*singoli link della lista*/
+	position: relative;
+	display: inline-block; /*gli elementi della lista vengono visualizzati tutti sulla stessa riga*/
+	top: 2px; /*tutti gli elementi della lista vengono spostati di 2 pixel verso il basso*/
+	border-style: solid; /*tipo bordo*/
+	border-top-width: 2px; /*larghezza bordo superiore*/
+	border-bottom-width: 0px; /*larghezza bordo inferiore*/
+	border-right-width: 2px; /*larghezza bordo destro*/
+	border-left-width: 2px; /*larghezza bordo sinistro*/
+	border-top-right-radius: 10px; /*smussa l'angolo alto destro del bordo CSS3*/
+	border-top-left-radius: 10px; /*smussa l'angolo alto sinistro del bordo CSS3*/
+	border-color: #EFEFEF; /*colore bordo*/
+	padding-left: 22px; /*distanza del testo dal bordo sinistro*/
+	padding-right: 22px; /*distanza del testo dal bordo destro*/
+	line-height: 17px; /*altezza testo*/
+	/*background-color: green;*/
+}
+
+ul#sezioni li.paginaCorrente{ /*link che rappresenta la pagina corrente*/
+	background-color: #EFEFEF;/*#C0C0C0;*/
+    font-weight: bold;
+}
+
+/*stili generali per la lista dei link presenti nell'header*/
+ul#sezioni a:link{
+	color: #EFEFEF; /*colore del testo dei link quando non sono stati ancora cliccati*/
+	text-decoration: none;
+}
+
+ul#sezioni a:visited{
+	color: #EFEFEF; /*colore del testo dei link dopo che sono stati cliccati*/
+}
+
+ul#sezioni a:hover{
+	font-weight: bold; /*quando il mouse passa sopra il link il testo diventa in grassetto*/
+}
+
+ul#sezioni a:active{
+	color: black; /*colore assunto dal testo dei link nel momento in cui vengono cliccati*/
+}
+
+/*stili specifici per i link che rappresentano la pagina correntemente visualizzata*/
+ul#sezioni li.paginaCorrente a:link{
+    color: black;
+}
+
+ul#sezioni li.paginaCorrente a:visited{
+    color:black;
+}
+
+														/** Fine stile Header **/
+
+
+														/** Stile Sidebar **/
+
+div#sidebar{
+	position: relative;
+	float: left; /*la sidebar verrà addossata a sinistra dal browser*/
+	width: 200px; /*larghezza sidebar*/
+	margin: 20px; /*i margini separano la sidebar dal bordo alto dell'header, da quello sinistro della pagina e da quello basso del footer*/
+	padding-left: 10px; /*distanza del testo dal bordo sinistro della sidebar*/
+	padding-right: 10px; /*distanza del testo dal bordo destro della sidebar*/
+	border-radius: 20px; /*angoli arrotondati*/
+	background-color: #EFEFEF;/*#C0C0C0; /*colore sfondo*/
+	font-family: "Times New Roman", Arial, sans-serif; /*tipi di caratteri da usare nella pagina*/
+	/*text-align: justify; /*testo giustificato*/
+}
+
+div.titoloSidebar{
+	position: relative;
+	top: -5px; /*il titolo viene spostato di 5px verso la parte alta della sidebar*/
+	/*background-image: url("../images/astro.png");*/
+	/*background-repeat: no-repeat; /*blocca ripetizione del logo*/
+	/*background-size: 60px 60px; /*dimensione icona: istruzione CSS3*/
+	height: 60px; /*l'altezza del div titolo è stata impostata in modo che l'icona venisse visualizzata interamente*/
+	line-height: 50px; /*altezza del testo impostata in modo che risulti al centro dell'icona*/
+	padding-left: 70px; /*spostamento testo per non farlo sovraporre all'immagine*/
+	color: black; /*colore testo*/
+	/*background-color: yellow;*/
+}
+
+/* Impostazione delle diverse immagini nella sidebar in base alla sezione del sito che si sta visitando */
+
+div#homeSide{
+	background-image: url("../images/astro.png");
+	background-repeat: no-repeat; /*blocca ripetizione del logo*/
+	background-size: 60px 60px; /*dimensione icona: istruzione CSS3*/
+}
+
+div#articoliSide{
+	background-image: url("../images/articoli-icon.png");
+	background-repeat: no-repeat; /*blocca ripetizione del logo*/
+	background-size: 60px 60px; /*dimensione icona: istruzione CSS3*/
+}
+
+div#forumSide{
+	background-image: url("../images/forum.png");
+	background-repeat: no-repeat; /*blocca ripetizione del logo*/
+	background-size: 60px 60px; /*dimensione icona: istruzione CSS3*/
+}
+
+div#loginSide{
+	background-image: url("../images/login.png");
+	background-repeat: no-repeat; /*blocca ripetizione del logo*/
+	background-size: 60px 60px; /*dimensione icona: istruzione CSS3*/
+}
+
+div#regSide{
+    background-image: url("../images/registrati.png");
+	background-repeat: no-repeat; /*blocca ripetizione del logo*/
+	background-size: 60px 60px; /*dimensione icona: istruzione CSS3*/
+}
+
+div#strumentiSide{
+	background-image: url("../images/telescopio-icon.png");
+	background-repeat: no-repeat; /*blocca ripetizione del logo*/
+	background-size: 60px 60px; /*dimensione icona: istruzione CSS3*/
+}
+
+div#linkSide{
+	background-image: url("../images/pianeta.png");
+	background-repeat: no-repeat; /*blocca ripetizione del logo*/
+	background-size: 60px 60px; /*dimensione icona: istruzione CSS3*/
+}
+
+/** Stili per i link delle categorie di discussione presenti nella sidebar della sezione "Forum" **/
+
+ul#categorieSidebar a:link{
+    font-weight: bold;
+    color: #417394;
+    text-decoration: none;
+}
+
+ul#categorieSidebar a:hover{
+    text-decoration: underline;
+}
+
+ul#categorieSidebar a:visited{
+    color: #417394;
+}
+
+														/** Fine stile Sidebar**/
+
+
+														/** Stile Content **/
+
+div#content{
+	position: relative;
+	float: right;
+	width: 700px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	margin-right: 20px;
+	padding: 10px;
+	border-radius: 20px;
+	background-color: #EFEFEF;
+	font-family: "Times New Roman", Arial, sans-serif; /*tipi di caratteri da usare nella pagina*/
+}
+
+div#titoloContent{
+	font-size: 12px; /*dimensione del testo*/
+	text-align: center; /*posiziona il testo al centro*/
+}
+
+div#content p{
+	text-align: justify; /*testo giustificato*/
+	padding-top: 5px; /*distanza del testo dall'immagine*/
+}
+
+div#content p.messaggio{
+    text-align: center; /*posiziona il testo al centro*/
+    line-height: 30px; /*altezza testo*/
+    margin: auto;
+    height: 40px; /*altezza box*/
+    width: 320px; /*larghezza box*/
+    
+}
+
+p.messaggio#errore{
+    border: 4px solid; /*spessore e stile bordi*/
+    border-color: #800000; /*colore bordi*/
+    background-color: #F28282; /*colore sfondo*/
+}
+
+p.messaggio#conferma{
+    border: 4px solid; /*spessore e stile bordi*/
+    border-color: green; /*colore bordi*/
+    background-color: #C2FF91; /*colore sfondo*/
+}
+
+div.form form{
+    margin-top: 20px; /*imposta una distanza di 20px dal form all'eventuale messaggio che potrebbe essere visualizzato*/
+}
+
+                                                        /** Fine stile Content **/
+
+
+                                                          /** Stile Clear **/
+
+div#clear{	/*il div clear è utilizzato affinchè il footer non si sovrapponga alle sidebar e al content*/
+	clear: both; /*impedisce che il footer si sovrapponga alle sidebar da entrambi i lati*/
+	width: 0px;
+	height: 0px;
+}
+
+                                                        /** Fine stile Clear **/
+
+
+                                                        /** Stile Footer **/
+
+div#footer{
+	position: relative;
+	width: 984px;
+	height: 100px;
+	border-top: 2px solid #EFEFEF;
+	padding-left: 20px; /*margine tra bordo sinistro e testo*/
+	padding-right: 20px; /*margine tra bordo destro e testo*/
+	padding-top: 5px; /*margine tra bordo alto e testo*/
+	padding-bottom: 5px; /*margine tra bordo basso e testo*/
+}
+
+div#footer p{ /*riguarda tutti i tag p presenti all'interno del footer*/
+	margin: 0px; /*elimina i margini automatici impostati dal tag p*/
+	padding: 0px; /*elimina il padding automatico impostato dal tag p*/
+}
+
+div#copyright p{ /*riguarda lo stile del testo del copyright*/
+	position: absolute;
+	bottom: 5px; /*posizionato a 5px dal bordo basso del footer*/
+	font-size: 12px; /*dimensione testo*/
+	color: white; /*colore testo*/
+}
+
+div#social{
+	position: absolute;
+	font-size: 14px; /*dimensione testo*/
+	bottom: 40px; /*posizionato a 40px dal bordo basso del footer*/
+	right: 5px; /*posizionato a 5px dal bordo destro del footer*/
+	line-height: 28px; /*altezza testo*/
+	/*background-color: red;*/
+}
+
+div#social p, div#social ul, div#social li{
+	display: inline-block; /*tutti gli elementi dei tag p ul e li vengono visualizzati sulla stessa riga*/
+}
+
+div#social p{ /*riguarda il testo della parte social del footer*/
+	color: white; /*colore testo bianco*/
+	/*background-color: green;*/
+}
+
+div#social ul{ /*riguarda la lista presente nella parte social del footer*/
+	margin: 0px; /*elimina i margini automatici impostati dal tag ul*/
+	padding: 0px; /*elimina il padding automatico impostato dal tag ul*/
+}
+
+div#social a:link{ /*i link presenti come elementi della lista nella parte social del footer*/
+	color: transparent; /*il  testo dei link è trasparente perchè verrà sostituito dalle immagini*/
+}
+
+li#facebook{ /*imposta l'icona di facebook*/
+	background-image: url("../images/fb.png");
+	background-repeat: no-repeat;
+	background-size: 30px 30px;
+	background-position: center;
+	height: 30px;
+}
+
+li#twitter{ /*imposta l'icona di twitter*/
+	background-image: url("../images/tw.png");
+	background-repeat: no-repeat;
+	background-size: 30px 30px;
+	background-position: left;
+	padding-left: 15px;
+	height: 30px;
+}
+
+                                                        /** Fine stile Footer **/
+
+
+                                                /** Stile sidebar sezione "I nostri articoli" **/
+
+ul#articoliSidebar{ /*lista non ordinata dei link*/
+	list-style-type: none; /*rimuove i bullets dagli elementi della lista*/
+	/*margin-top: 40px; /*distanza tra il titolo della sidebar e la lista dei link*/
+	padding-left: 10px; /*distanza lista link dal bordo sinistro della sidebar*/
+	/*background-color: white;*/
+}
+
+ul#articoliSidebar ul{
+	list-style-type: none; 
+}
+
+ul#articoliSidebar li{ /*definizione stile comune a tutti gli elementi della lista*/
+	background-repeat: no-repeat;
+	background-position: left;
+	/*height: 35px; /*altezza impostata in modo da rendere totalmente visibile l'icona*/
+	padding-left: 40px; /*distanza testo da icona*/
+}
+
+ul#articoliSidebar ul li{
+	background-repeat: no-repeat;
+	background-position: left;
+	/*height: 35px; /*altezza impostata in modo da rendere totalmente visibile l'icona*/
+	padding-left: 50px; /*distanza testo da icona*/
+}
+
+ul#articoliSidebar a{
+    color: #4173B4; /*imposta un colore generale in modo che anche il "falso" link "Pianeti" sia dello stesso colore degli altri*/
+}
+
+ul#articoliSidebar a:link{
+	text-decoration: none;
+}
+
+ul#articoliSidebar a:visited{
+	color: #4173B4;
+}
+
+ul#articoliSidebar a:hover{
+	font-weight: bold;
+	text-decoration: underline;
+	cursor: pointer; /*occorre impostare esplicitamente questa proprietà perchè altrimenti non appare il cursore sopra il link "Pianeti"*/
+}
+
+ul#articoliSidebar a:active{
+	color: purple;
+}
+
+li#terra{
+	background-image: url("../images/terra-icon.png");
+	background-size: 30px 30px;
+	/*margin-bottom: 10px; /*margine inferiore che separa un elemento da quello successivo*/
+	line-height: 30px; /*altezza testo*/
+	/*background-color:purple;*/
+}
+
+li#luna{
+	background-image: url("../images/luna-icon.png");
+	background-size: 30px 30px;
+	/*margin-bottom: 10px; /*margine inferiore che separa un elemento da quello successivo*/
+	line-height: 30px; /*altezza testo*/
+	/*background-color: green;*/
+}
+
+li#pianeti{
+	background-image: url("../images/pianeti-icon.jpg");
+	background-size: 30px 30px;
+	line-height: 30px; /*altezza testo*/
+}
+
+li#mercurio{
+	background-image: url("../images/mercurio-icon.png");
+	background-size: 30px 28px;
+	/*margin-bottom: 10px; /*margine inferiore che separa un elemento da quello successivo*/
+	line-height: 30px; /*altezza testo*/
+	/*background-color: pink;*/
+}
+
+li#venere{
+	background-image: url("../images/venere-icon.png");
+	background-size: 30px 28px;
+	/*margin-bottom: 10px; /*margine inferiore che separa un elemento da quello successivo*/
+	line-height: 30px; /*altezza testo*/
+	/*background-color: pink;*/
+}
+
+li#marte{
+	background-image: url("../images/marte-icon.png");
+	background-size: 30px 30px;
+	/*margin-bottom: 10px; /*margine inferiore che separa un elemento da quello successivo*/
+	line-height: 30px; /*altezza testo*/
+	/*background-color: pink;*/
+}
+
+li#giove{
+	background-image: url("../images/giove-icon.png");
+	background-size: 30px 29px;
+	/*margin-bottom: 10px; /*margine inferiore che separa un elemento da quello successivo*/
+	line-height: 30px; /*altezza testo*/
+	/*background-color: pink;*/
+}
+
+li#saturno{
+	background-image: url("../images/saturno-icon.png");
+	background-size: /*40px 22px*/40px 22px;
+	/*margin-bottom: 10px; /*margine inferiore che separa un elemento da quello successivo*/
+	line-height: 30px; /*altezza testo*/
+	/*background-color: pink;*/
+}
+
+li#urano{
+	background-image: url("../images/urano-icon.png");
+	background-size: 30px 30px;
+	/*margin-bottom: 10px; /*margine inferiore che separa un elemento da quello successivo*/
+	line-height: 30px; /*altezza testo*/
+	/*background-color: pink;*/
+}
+
+li#nettuno{
+	background-image: url("../images/nettuno-icon.png");
+	background-size: 30px 30px;
+	/*margin-bottom: 10px; /*margine inferiore che separa un elemento da quello successivo*/
+	line-height: 30px; /*altezza testo*/
+	/*background-color: pink;*/
+}
+
+li#pNani{
+	background-image: url("../images/nani-icon.png");
+	background-size: 30px 30px;
+	/*margin-bottom: 10px; /*margine inferiore che separa un elemento da quello successivo*/
+	line-height: 30px; /*altezza testo*/
+	/*background-color: pink;*/
+}
+
+li#sole{
+	background-image: url("../images/sole-icon.png");
+	background-size: 30px 30px;
+	/*margin-bottom: 10px; /*margine inferiore che separa un elemento da quello successivo*/
+	line-height: 30px; /*altezza testo*/
+	/*background-color: pink;*/
+}
+
+li#viaLattea{
+	background-image: url("../images/galassia-icon.png");
+	background-size: 30px 30px;
+	/*margin-bottom: 10px; /*margine inferiore che separa un elemento da quello successivo*/
+	line-height: 30px; /*altezza testo*/
+	/*background-color: pink;*/
+}
+
+li#stelle{
+	background-image: url("../images/stelle-icon.jpg");
+	background-size: 30px 30px;
+	/*margin-bottom: 10px; /*margine inferiore che separa un elemento da quello successivo*/
+	line-height: 30px; /*altezza testo*/
+	/*background-color: pink;*/
+}
+
+                                        /** Fine stile sidebar della sezione "I nostri articoli" **/
+
+
+                                  /** Stile content per gli articoli della sezione "I nostri articoli" **/
+
+/* Definisce lo stile delle immagini aventi classe "principale" (sono quelle che stanno al centro degli articoli) */
+img.principale{
+	padding-top: 5px; /*distanza immagine dal titolo*/
+}
+
+/* Definisce lo stile delle immagini aventi classe "sinistra" (sono quelle che stanno sulla sinistra degli articoli) */
+img.sinistra{
+	float: left;
+	padding-right: 15px;
+	padding-left: 2px;
+	padding-top: 7px;
+}
+
+/* Definisce lo stile delle immagini aventi classe "destra" (sono quelle che stanno sulla destra degli articoli) */
+img.destra{
+	float: right;
+	padding-right: 2px;
+	padding-left: 15px;
+	padding-top: 7px;
+}
+
+/* Riferito alla sola immagine riguardante l'alternarsi delle stagioni nell'articolo che parla della Terra */
+img#stagioni{
+	padding-bottom: 10px;
+}
+
+/* Si riferisce alla lista di link presenti nella sidebar della sezione articoli sotto la voce pianeti e al paragrafo riguardante la struttura del Sole*/
+li#pianeti p,#sole-struttura{
+	display: inline; /*permette di evitare che si vada a capo prima e dopo il paragrafo*/
+}
+
+/* Si riferisce alla lista ordinata presente all'interno del paragrafo in cui si parla della struttura del Sole */
+.paragrafo{
+	margin-top: 0px;
+}
+
+                                    /** Fine stile content per gli articoli della sezione "I nostri articoli" **/
+
+
+                                                              /** Stile form **/
+
+div.form span{ /*stile per le etichette relative ai campi dei form*/
+    float: left;
+    text-align: right; /*allineamento a destra del testo delle etichette*/
+    line-height: 20px; /*allineamento verticale del testo delle etichette*/
+    width: 80px; /*larghezza etichette*/
+    margin-right: 30px; /*lascia 30px di spazio tra un'etichetta e il suo relativo campo input*/
+}
+
+div.form#reg{
+    margin-top: 40px;
+}
+
+input[type=radio]{ /*stile relativo ai soli tag input che hanno l'attributo type="radio"*/
+    position: absolute;
+    margin-left: 0px; /*modificala posizione del margine sinistro in modo che l'input "radio" sia allineato agli altri*/
+}
+
+.registra{ /*stile per il paragrafo e il bottone che portano dalla schermata login a quella di registrazione*/
+    display: inline;
+    margin-left: 5px;
+}
+
+.button{ /*stile generico per i pulsanti dei form*/
+    font-family: "Open Sans", Arial, sans-serif; /*tipi di caratteri da usare nel bottone*/
+    color: white; /*colore del testo*/
+    border-style: solid; /*stile bordi bottone*/
+    border-color: #001030; /*colore bordi*/
+    border-radius: 7px; /*arrotonda bordi*/
+    background-color: #001030; /*colore sfondo bottone*/
+    width:auto;
+    height: auto;
+    margin: 5px;
+}
+
+.button:hover{ /*stile dei pulsanti quando si posiziona il mouse sopra*/
+	font-weight: bold;
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+.button#login{ /*stile specifico per il pulsante dei form di login*/
+    position: relative;
+    width: 50px;
+    top: 5px;
+    left: 170px;
+}
+
+.button#registrazione{ /*stile specifico per il pulsante del form per la registrazione*/
+    position: relative;
+    margin-top: 15px;
+    left: 300px;
+}
+
+label[for=uomo] span{ /*stile specifico per l'etichetta dell'input type="radio" id="uomo"*/
+    position: absolute;
+    left: 100px;
+}
+
+label[for=donna] span{ /*stile specifico per l'etichetta dell'input type="radio" id="donna"*/
+    position: absolute;
+    left: 103px; /*posiziona la scritta donna esattamente sotto quella uomo*/
+}
+                                                            /** Fine stile form **/
+                                                            
+                                                   /** Stile funzioni speciali amministratore **/
+
+/** Stile generale per l'elenco delle funzioni **/
+
+div#listaFunzioniAmm{
+    position: relative;
+    border: 2px solid #001030;
+    border-radius: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+div#listaFunzioniAmm ul{
+    position: relative;
+    margin: 0px;
+    padding: 0px;
+    /*border: 1px solid purple;*/
+}
+
+div.contenitoreFunzioni{
+    position: relative;
+    top: 1px;
+    border-bottom: 1px solid #001030;
+}
+
+li.funzione{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    height: 60px;
+    background-image: url("../images/settings_icon.png");
+    background-size: 60px 60px;
+    background-repeat: no-repeat;
+    background-position: left;
+    line-height: 55px;
+    list-style-type: none;
+    /*border: 1px solid green;*/
+}
+
+li.funzione a{
+    position: absolute;
+    left: 70px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #417394;
+}
+
+li.funzione a:link{
+    text-decoration: none;
+}
+
+li.funzione a:hover{
+	text-decoration: underline;
+	cursor: pointer; /*occorre impostare esplicitamente questa proprietà perchè altrimenti non appare il cursore sopra il link*/
+}
+
+li.funzione a:active{
+	color: blue;
+}
+
+/** Stile per "Aggiungi categoria di discussione" **/
+
+div#content p.toggle{ /*stile per il messaggio d'errore che compare quando si cerca di inserire una categoria già presente sul database*/
+    margin-top: 10px;
+}
+
+.button#creaCategoria{ /*stile specifico per il pulsante del form per aggiungere una categoria di discussione*/
+    position: relative;
+    margin-bottom: 15px;
+    top: 5px;
+    left: 158px;
+}
+
+/** Stile per "Visualizza lista utenti" **/
+
+div#tabella{
+    margin-top: 50px;
+    margin-bottom: 10px;
+    /*border: 1px solid yellow;*/
+}
+
+table{ /*stile tabella per la funzione "visualizza la lista degli utenti"*/
+    position: relative;
+    border: 2px solid;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+tr.intestazione th{ /*stile delle celle presenti nella riga di intestazione della tabella*/
+    border: 1px solid black;
+    background-color: #104160;
+    color: white;
+    width: 100%;
+}
+
+td{ /*stile generale delle celle della tabella*/
+    border: 1px solid;
+}
+
+tr.pari td{ /*stile specifico per le celle della tabella presenti nelle righe pari*/
+    background-color: #C0E1FF; /*cambia colore sfondo alle righe pari della tabella*/
+}
+
+/** Stile per "Cambia ruolo o banna utente" **/
+
+div#cambiaRuoloBanna{
+    margin-top: 50px;
+    /*border: 1px solid green;*/
+}
+
+div#cambiaRuoloBanna ul{
+    position: relative;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    /*border: 1px solid yellow;*/
+}
+
+div.listaUtenti{
+    position: relative;
+    margin-left: -40px;
+    border-bottom: 1px solid #001030;
+    padding-left: 5px;
+    height: 52px;
+}
+
+li.utente{
+    position: relative;
+    top: -5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 400px;
+    height: 50px;
+    list-style-type: none;
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: 50px 50px;
+    line-height: 45px;
+    /*border: 1px solid green;*/
+}
+
+li.utente#uomo{
+    background-image: url("../images/user_man.png");
+}
+
+li.utente#donna{
+    background-image: url("../images/user_woman.png");
+}
+
+li.utente span{
+    position: absolute;
+    left: 65px;
+}
+
+form.cambia-ruolo{ /*stile del form "Cambia ruolo"*/
+    position: absolute;
+    top: -10px;
+    left: 450px;
+    display: inline;
+}
+
+form.banna{ /*stile del form "Banna utente"*/
+    position: absolute;
+    left: 450px;
+    bottom: 0px;
+    display: inline;
+}
+
+                                               /** Fine stile funzioni speciali amministratore **/
+
+                                             /** Stile form per la creazione di una discussione **/
+
+div.creaDisc{
+    position: relative;
+    margin-top: 40px;
+}
+
+input#titolo{ /*stile per il campo in cui inserire il titolo della discussione*/
+    width: 400px;
+    border: 1px solid #A2A2A2;
+    border-radius: 4px;
+}
+
+label[for=post] span{ /*stile scritta "Post" accanto al textarea*/
+    position: absolute;
+    left: 10px;
+}
+
+textarea#firstPost{ /*stile del textarea nella pagina per creare una nuova discussione*/
+    position: relative;
+    top: -20px;
+    left: 49px;
+    width: 634px;
+    height: 200px;
+    margin-top: 20px;
+    border: 1px solid #A2A2A2;
+    border-radius: 10px;
+    padding: 5px;
+    font-family: "Open Sans", Arial, sans-serif;
+    font-size: 15px;
+    resize: none;
+}
+
+.button#creaDiscussione{ /*stile del pulasante "Crea"*/
+    position: relative;
+    width: 50px;
+    left: 318px;
+}
+
+                                       /** Fine stile form per la creazione di discussioni **/
+                                       
+                                                /** Stile visualizzazione elenco discussioni **/
+
+div.form#newDisc{ /*stile del div che contiene il pulsante "Nuova discussione"*/
+    margin-top: 50px;
+}
+                                                
+.button#nuovaDiscussione{ /*stile pulsante "Nuova discussione"*/
+    margin-left: 0px;
+}
+
+div#listaDiscussioni{ /*stile div che contiene la lista delle discussioni per una categoria*/
+    position: relative;
+    margin-top: 10px;
+    border: 2px solid #001030;
+    border-radius: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+div#listaDiscussioni ul{ /*stile specifico della lista che contiene le discussioni*/
+    position: relative;
+    margin: 0px;
+    padding: 0px;
+}
+
+div.contenitoreVoce{ /*stile div che contiene ogni elemento della lista*/
+    position: relative;
+    border-bottom: 1px solid #001030;
+    top: 1px;
+    height: 64px;
+}
+
+li.voceSingola{ /*stile specifico di ogni singolo elemento della lista*/
+    position: absolute;
+    /*border: 1px solid yellow;*/
+    width: 450px;
+    height: 54px;
+    top: 0px;
+    left: 0px;
+    list-style-type: none;
+    background-image: url("../images/discuss.png");
+    background-size: 60px 51px;
+    background-repeat: no-repeat;
+    background-position: left;
+    padding-top: 8px;
+    
+}
+
+/*stili dei link indicanti i titoli delle discussioni*/
+
+li.voceSingola a{ 
+    position: absolute;
+    top: 10px;
+    left: 65px;
+    font-size: 19px;
+    color: #417394;
+}
+
+li.voceSingola a:link{
+    font-weight: bold;
+    text-decoration: none;
+}
+
+li.voceSingola a:hover{
+    text-decoration: underline;
+    
+}
+
+p.creatore{ /*stile paragrafo che contiene il nome dell'utente che ha creato la discussione*/
+    position: absolute;
+    top: -9px;
+    left: 500px;
+    display: inline;
+}
+
+p.creatore span{ /*stile per il nome dell'utente*/
+    font-weight: bold;
+    color: #417394;
+}
+
+p.dataOra{ /*stile paragrafo che contiene la data e l'ora di creazione della discussione*/
+    position: absolute;
+    top: 16px;
+    left: 500px;
+}
+
+p.dataOra span{ /*stile per la data e l'ora*/
+    font-size: 14px;
+}
+
+                                                /** Fine stile visualizzazione elenco discussioni**/
+                                                
+                                                   /** Stile visualizzazione post discussioni **/
+                                                
+div.form#delDisc{ /*stile del div che contiene il form con il pulsante "Elimina discussione"*/
+    margin-top: 50px;
+}
+
+.button#eliminaDiscussione{ /*stile del pulsante "Elimina discussione"*/
+    position: relative;
+    margin-left: 0px;
+}
+
+div#listaPost{ /*stile div che contiene tutti i post*/
+    margin-top: 10px;
+    border-radius: 10px;
+    /*border: 2px solid green;*/
+}
+
+div.contenitorePost{ /*stile del div che contiene ciascun post*/
+    position: relative;
+    margin-bottom: 10px;
+    /*border: 1px solid yellow;*/
+}
+
+div.infoUtente{ /*stile del div in cui sono presenti il nome dell'utente che ha scritto il post la data e l'ora*/
+    padding: 2px;
+    padding-left: 10px;
+    border: 1px solid #7192A8;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background-color: #7192A8;
+    color: white;
+}
+
+span.creatorePost{ /*stile specifico per il nome dell'utente che ha scritto il post*/
+    font-weight: bold;
+}
+
+span.dataOraPost{ /*stile specifico per l'informaione della data e dell'ora di scrittura del post*/
+    position: absolute;
+    right: 20px;
+}
+
+p#paragrafoPost{ /*stile del paragrafo che contiene il testo del post*/
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+div.testo{ /*stile del testo del post*/
+    margin-top: 0px;
+    padding-top: 0px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-left: 1px solid #D2D2D2;
+    border-right: 1px solid #D2D2D2;
+    border-bottom: 1px solid #D2D2D2;
+    min-height: 100px;
+    /*border: 1px solid #FFFF80;/*#7192A8;*/
+}
+
+div#rispondi-elimina{ /*stile del div che contiene i pulsanti "Rispondi" "Rispondi quotando" ed "Elimina post"*/
+    position: relative;
+    top: -1px;
+    border: 1px solid #D2D2D2;
+    height: 24px;
+    background-color: #D2D2D2;
+}
+
+div.form#delPost, div.form#reply-quote, div.form#reply{ /*stile dei 3 form che contengono i pulsanti detti sopra*/
+    float: right;
+    height: 28px;
+    /*border: 1px solid blue;*/
+}
+
+.button#eliminaPost, .button#rispondi, .button#rispondiQuotando{ /*stile specifico per i 3 pulsanti*/
+    position: relative;
+    margin-top: 0px;
+    top: -19px;
+}
+
+                                               /** Fine stile visualizzazione post discussioni **/
+
+                                                 /** Stile pagina per creare un nuovo post **/
+
+span.titleInfo{ /*stile per il nome della discussione per cui si sta creando il post (viene applicato anche al nome della categoria
+                  visualizzata quando si crea una nuova discussione)*/
+    color: #417394;
+}
+
+textarea#post{ /*stile del textarea presente nella pagina per creare un nuovo post*/
+    position: relative;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    border: 1px solid #A2A2A2;
+    border-radius: 10px;
+    padding: 5px;
+    width: 688px;
+    height: 200px;
+    font-family: "Open Sans", Arial, sans-serif;
+    font-size: 15px;
+    resize: none;
+}
+
+div.quote{ /*stile del div presente nei testi dei post scritti scegliendo l'opzione "Rispondi quotando"*/
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 5px;
+    background-color: #AFD9FF;
+    border-radius: 2px;
+    /*border: 1px solid blue;*/
+}
+
+.button#creaPost{ /*stile del pulsante "Invia"*/
+    position: relative;
+    left: -4px;
+    left: 319px;
+}
+
+                                              /** Fine stile pagina per creare un nuovo post **/

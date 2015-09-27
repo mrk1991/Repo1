@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Intro </title>
+		<meta charset="utf-8">
+    </head>
+    
+    <body>
+
+        <h2> Descrizione dell'applicazione </h2>
+        <p>
+            Il sito è suddiviso fondamentalmente in due parti:
+        </p>
+        <ul>
+            <li> una parte "statica" che consiste nelle sezioni "Home", "Articoli", "Strumenti" e "Link utili"; </li>
+            <li> l'applicazione vera e propria che risiede nella sezione "Forum"; </li>
+        </ul>
+        <p>  
+            Il forum offre la possibilità di registrarsi inserendo alcuni dati:
+        </p>
+        <ul>
+            <li> username </li>
+            <li> password </li>
+            <li> età </li>
+            <li> sesso </li>
+            <li> email </li>
+            <li> città </li>
+        </ul>
+        <p>
+            Prima di poter utilizzare l'applicazione, è necessario effettuare il login. E' possibile accedere con 2 ruoli differenti:
+        </p>
+        <ul>
+            <li> "Utente generico"; </li>
+            <li> "Amministratore"; </li>
+        </ul>
+        <p>
+           In base al ruolo utente si viene reindirizzati verso una pagina differente:
+        </p>
+        <ul>
+            <li> una che contiene la lista delle discussioni riguardanti il regolamento del forum, per l'utente generico; </li>
+            <li> una che contiene la lista di alcune funzionalità speciali per l'amministratore; </li>
+        </ul>
+        <p>
+            Sul forum le varie discussioni vengono raggruppate in base alla categoria a cui appartengono ed è possibile crearne delle nuove
+            oppure rispondere ai post degli atri utenti nelle discussioni già aperte. 
+            </br>
+            Le modalità di risposta implementate sono 2:
+        </p>
+        <ul>
+            <li> rispondi: permette semplicemente di pubblicare un post; </li>
+            <li> rispondi quotando: permette di citare il testo di un particolare post a cui si vuole rispondere; </li>
+        </ul>
+        <p>
+            L'amministratore può svolgere tutte le operazioni di un utente generico più alcune speciali che sono:
+        </p>
+        <ul>
+            <li> inserire nuove categorie per le discussioni, oltre a quelle già presenti; </li>
+            <li> visualizzare la lista di tutti gli utenti registrati nel sito, con tutte le relative informazioni; </li>
+            <li> modificare il ruolo degli altri utenti:
+                <ul>
+                    <li> promuovere un "Utente generico" ad "Amministratore"; </li>
+                    <li> rimuovere i privilegi di "Amministratore" a un utente rendendolo un "Utente generico"; </li>
+                    <li> bannare qualsiasi utente in modo da bloccarne il login; </li>
+                    <li> sbloccare gli utenti bannati per permettergli di riaccedere al sito; </li>
+                </ul>
+            <li> creare nuove discussioni all'interno della categoria "Regolamento", dove non si possono pubblicare post; </li>
+            <li> eliminare intere discussioni con i relativi post; </li>
+            <li> eliminare singoli post; </li>
+        </ul>
+
+        <h2> Requisiti del progetto </h2>
+        <ul>
+            <li>Utilizzo di HTML e CSS</li>
+            <li>Utilizzo di PHP e MySQL</li>
+            <li>Utilizzo del pattern MVC </li>
+            <li>Due ruoli (utente generico e amministratore)</li>
+            <li>Transazione per il salvataggio e l'eliminazione di una discussione.</li>
+            <li>Validazione ajax per la registrazione, il login, la creazione di una categoria, la creazione di una discussione, la creazione di
+                un post, l'eliminazione di una discussione, l'eliminazione di un singolo post</li>
+        </ul>
+        <p>
+            Note sulle transazioni.</br>
+            La transazione per la creazione di una nuova discussione viene eseguita nel metodo salvaDiscussione della classe Discussione.php e
+            si avvale anche dei metodi cercaId, sempre della classe Discussione.php, e salvaPost della classe Post.php. In entrambi i casi,
+            tramite l'utilizzo di un parametro opzionale nei metodi cercaId e salvaPost, si è resa possibile la condivisione della connessione
+            instaurata con il database che dava inizio alla transazione, e in questo modo è stato possibile realizzarla suddividendo i vari
+            compiti tra le diverse classi dell'applicazione.</br>
+            La transazione per l'eliminazione di una discussione e di tutti i suoi post, viene eseguita nel metodo eliminaDiscussione della
+            classe Discussione.php e si avvale anche del metodo eliminaPost della classe Post.php. L'implementazione è stata realizzata con lo
+            stesso meccanismo descritto sopra.
+        </p>
+
+        <h2>Accesso al progetto</h2>
+        <p>
+            La homepage del progetto si trova sulla URL <a href="index.php">http://spano.sc.unica.it/amm2015/faddaMirko/progetto/index.php</a>
+        <p>
+        <p>
+            Si può accedere all'applicazione con le seguenti credenziali
+        </p>
+        <ul>
+            <li>Ruolo amministratore:</li>
+            <ul>
+                <li>username: mirko</li>
+                <li>password: fadda</li>
+            </ul>
+            <li>Ruolo utente:</li>
+            <ul>
+                <li>username: sharon</li>
+                <li>password: carta</li>
+            </ul>
+        </ul>
+    </body>
+</html>
