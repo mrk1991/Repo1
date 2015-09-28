@@ -175,23 +175,24 @@ class Post{
         $query .= "FROM post ";
         $query .= "JOIN utenti ON utenti.id = post.creatore_id ";
         $query .= "JOIN discussioni ON discussioni.id = post.discussione_id ";
-        $query .= "WHERE discussioni.id = ?";
+        $query .= "WHERE discussioni.id = ? ";
+        $query .= "ORDER BY post.data";
         
         $statement->prepare($query); //prepara lo statement per l'esecuzione
         if(!$statement){
-            error_log("[caricaElencoPost]] Errore d'inizializzazione dello statement");
+            error_log("[caricaElencoPost] Errore d'inizializzazione dello statement");
             $client->close(); //rilascia la connessione con il database
             return null;
         }
         
         if(!$statement->bind_param("i", $id_discussione)){ //collega i parametri con il loro tipo
-            error_log("[caricaElencoPost]] Errore nel binding dei parametri nella query");
+            error_log("[caricaElencoPost] Errore nel binding dei parametri nella query");
             $client->close(); //rilascia la connessione con il database
             return null;
         }
         
         if(!$statement->execute()){ //esegue la query
-            error_log("[caricaElencoPost]] Errore nell'esecuzione della query");
+            error_log("[caricaElencoPost] Errore nell'esecuzione della query");
             $client->close(); //rilascia la connessione con il database
             return null;
         }
@@ -200,7 +201,7 @@ class Post{
         
         //collega i risultati della query con i parametri espliciti passati al metodo
         if(!$statement->bind_result($risultato['id'], $risultato['data'],  $risultato['post'], $risultato['nome_utente'])){ 
-            error_log("[caricaElencoPost]] Errore nel binding dei risultati");
+            error_log("[caricaElencoPost] Errore nel binding dei risultati");
             $client->close(); //rilascia la connessione con il database
             return null;
         }

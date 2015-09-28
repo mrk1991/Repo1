@@ -448,11 +448,9 @@ class Utente{
                                                           informazioni relative a un utente caricato*/
                 $listaUtenti[] = Utente::creaUtenteDaArray($utente); //$listaUtenti è un array di oggetti di tipo Utente
             }
-            $statement->close(); //libera le risorse dello statement
             $client->close(); //rilascia la connessione con il database
             return $listaUtenti; //si rende la lista degli utenti caricati
         } else{
-        $statement->close(); //libera le risorse dello statement
             $client->close(); //rilascia la connessione con il database
             return false; //si rende false perchè la query non ha prodotto risultati
         }

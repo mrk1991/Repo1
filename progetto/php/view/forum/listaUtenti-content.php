@@ -6,13 +6,13 @@
     <?php
     if(!isset($listaUtenti)){
     ?>
-        <p class="messaggio" id="errore">
-            <?="Errore: impossibile caricare la lista utenti"?>
+        <p>
+            <?="Impossibile caricare la lista utenti"?>
         </p>
     <?php
     } else if($listaUtenti == false){
         ?>
-            <p class="messaggio" id="errore">
+            <p>
                 <?="Non ci sono utenti registrati"?>
             </p>
         <?php

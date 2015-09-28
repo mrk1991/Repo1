@@ -383,7 +383,8 @@ class Discussione{
         $query .= "FROM discussioni ";
         $query .= "JOIN utenti ON utenti.id = discussioni.creatore_id ";
         $query .= "JOIN categorie ON categorie.id = discussioni.categoria_id ";
-        $query .= "WHERE categorie.id = ?";
+        $query .= "WHERE categorie.id = ? ";
+        $query .= "ORDER BY discussioni.data";
         
         $statement->prepare($query); //prepara lo statement per l'esecuzione
         if(!$statement){

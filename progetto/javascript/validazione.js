@@ -3,17 +3,9 @@ $(document).ready(function(){
     $("p.messaggio").hide(); //nasconde i messaggi d'errore o conferma alla prima apertura di una pagina che potrebbe visualizzarli
     $("p.toggle").hide();
     
-    //$("p#conferma").hide(); //VECCHIO DA ELIMINARE
-    
     //funzione per la validazione del login
     $("#login").click(function(event){ //aggancia il click del pulsante "Login"
-        
-        //$("p.messaggio").hide(); //nasconde i messaggi d'errore o conferma quando si verifica un nuovo click sul tasto "Login"
-        
-        //$("p#errore").hide(); //VECCHIO DA ELIMINARE
-        //$("p#conferma").hide(); //VECCHIO DA ELIMINARE
-        
-        
+ 
         event.preventDefault(); //previene che venga eseguita la submit
         
         var username = $("#username").val(); //prelevo il valore inserito dall'utente nel campo username
@@ -26,12 +18,9 @@ $(document).ready(function(){
             $("p.messaggio").attr("id", "errore").html("Alcuni campi sono vuoti");
             $("p.messaggio").show(); //rende visualizzabile il messaggio
             
-            /*$("p#errore").html("Hai lasciato dei campi vuoti"); //VECCHIO DA ELIMINARE
-            $("p#errore").show();*/ //VECCHIO DA ELIMINARE
-            
         } else{ //se i campi sono stati tutti compilati
             $.ajax({ //richiama la funzione ajax
-                url : "index.php?page=login",//"",php/controller/ControlloreAjax.php //indirizzo a cui inviare la richesta
+                url : "index.php?page=login", //indirizzo a cui inviare la richesta
                 //lista dei dati da passare
                 data : {
                     validazione : true,//'validaLogin',//validazione : true,
@@ -54,14 +43,10 @@ $(document).ready(function(){
                         $("p.messaggio").attr("id", "conferma").html(conferma);
                         $("p.messaggio").show(); //rende visualizzabile il messaggio
                         
-                        /*$("#conferma").html(conferma); //VECCHIO DA ELIMINARE
-                        $("p#conferma").show();*/ //VECCHIO DA ELIMINARE
-                        
                         // Redirect dopo 0.8 secondi
                         setTimeout(function() {
-                          $(location).attr('href','index.php?page=forum');
+                          $(location).attr('href','index.php?page=forum'); //reindirizzamento verso la home del forum
                         }, 800);
-                        //location.replace("index.php?page=forum"); //reindirizzamento verso la home del forum
                     }
                     
                 },
@@ -73,7 +58,7 @@ $(document).ready(function(){
     });
     
     //funzione per la validazione della registrazione
-    $("#registrazione").click(function(event){ //aggancia il click del pulsante "Login"
+    $("#registrazione").click(function(event){ //aggancia il click del pulsante "Registrati"
 
         event.preventDefault(); //previene che venga eseguita la submit
         
@@ -123,9 +108,8 @@ $(document).ready(function(){
                         $("p.messaggio").show(); //rende visualizzabile il messaggio
                         
                         setTimeout(function() {
-                          $(location).attr('href','index.php?page=login');
+                          $(location).attr('href','index.php?page=login'); //reindirizzamento verso la pagina di login
                         }, 800);
-                        //location.replace("index.php?page=login"); //reindirizzamento verso la pagina di login
                     }
                 },
                 error: function (data){ //funzione da eseguire in caso di insuccesso
@@ -177,7 +161,7 @@ $(document).ready(function(){
                         
                         // Redirect dopo 0.8 secondi
                         setTimeout(function() {
-                          $(location).attr('href','index.php?page=forum');
+                          $(location).attr('href','index.php?page=forum'); //reindirizzamento verso la pagina principale del forum
                         }, 800);
                     }
                 },
@@ -243,7 +227,7 @@ $(document).ready(function(){
                         
                         // Redirect dopo 0.8 secondi
                         setTimeout(function() {
-                          $(location).attr('href', indirizzo);
+                          $(location).attr('href', indirizzo); //reindirizzamento verso la categoria della discussione aggiunta
                         }, 800);
                     }
                 },
@@ -299,7 +283,7 @@ $(document).ready(function(){
         });
     });
     
-    //funzione per la validazione dell'eliminazione di una discussione
+    //funzione per la validazione della creazione di un post
     $("#creaPost").click(function(event){ //aggancia il click del pulsante "Invia"
           
         event.preventDefault(); //previene che venga eseguita la submit

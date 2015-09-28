@@ -26,14 +26,14 @@
     $discussioni = $categoria->getListaDiscussioni(); //$discussioni è un array contenente elementi di tipo Discussione
     if(!isset($discussioni)){ //se la lista è null significa che si è verificato un errore durante il caricamento dal database
     ?>
-        <p class="messaggio" id="errore">
-            <?= "Errore: impossibile caricare la lista delle discussioni" ?>
+        <p>
+            <?= "Impossibile caricare la lista delle discussioni" ?>
         </p>
     <?php
     }
     else if($discussioni == false){ //se è false significa che non ci sono discussioni per la categoria
         ?>
-        <p class="messaggio" id="errore">
+        <p>
             <?= "Non sono presenti discussioni per questa categoria" ?>
         </p>
         <?php

@@ -28,14 +28,14 @@
     $post = $discussione->getListaPost(); //$post è un array contenente elementi di tipo Post
     if(!isset($post)){ //se la lista è null significa che si è verificato un errore durante il caricamento dal database
     ?>
-        <p class="messaggio" id="errore">
-            <?= "Errore: impossibile caricare i post" ?>
+        <p>
+            <?= "Impossibile caricare i post" ?>
         </p>
     <?php
     }
     else if($post == false){ //se è false significa che non ci sono post per la discussione
         ?>
-        <p class="messaggio" id="errore">
+        <p>
             <?= "Non sono presenti post per questa discussione" ?>
         </p>
         <?php
