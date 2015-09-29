@@ -695,17 +695,21 @@ table{ /*stile tabella per la funzione "visualizza la lista degli utenti"*/
     border: 2px solid;
     border-collapse: collapse;
     text-align: center;
+    width: 698px;
 }
 
 tr.intestazione th{ /*stile delle celle presenti nella riga di intestazione della tabella*/
     border: 1px solid black;
     background-color: #104160;
     color: white;
-    width: 100%;
+    max-width: 120px;
+    word-wrap: break-word;
 }
 
 td{ /*stile generale delle celle della tabella*/
     border: 1px solid;
+    max-width: 120px;
+    word-wrap: break-word;
 }
 
 tr.pari td{ /*stile specifico per le celle della tabella presenti nelle righe pari*/
