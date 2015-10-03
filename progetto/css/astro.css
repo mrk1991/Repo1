@@ -369,6 +369,7 @@ ul#articoliSidebar ul li{
 }
 
 ul#articoliSidebar a{
+    font-weight: bold;
     color: #4173B4; /*imposta un colore generale in modo che anche il "falso" link "Pianeti" sia dello stesso colore degli altri*/
 }
 
@@ -381,7 +382,6 @@ ul#articoliSidebar a:visited{
 }
 
 ul#articoliSidebar a:hover{
-	font-weight: bold;
 	text-decoration: underline;
 	cursor: pointer; /*occorre impostare esplicitamente questa proprietà perchè altrimenti non appare il cursore sopra il link "Pianeti"*/
 }
@@ -703,13 +703,13 @@ tr.intestazione th{ /*stile delle celle presenti nella riga di intestazione dell
     background-color: #104160;
     color: white;
     max-width: 120px;
-    word-wrap: break-word;
+    word-wrap: break-word; /*forza il testo nella colonna ad andare a capo se troppo lungo*/
 }
 
 td{ /*stile generale delle celle della tabella*/
     border: 1px solid;
     max-width: 120px;
-    word-wrap: break-word;
+    word-wrap: break-word; /*forza il testo nella colonna ad andare a capo se troppo lungo*/
 }
 
 tr.pari td{ /*stile specifico per le celle della tabella presenti nelle righe pari*/
